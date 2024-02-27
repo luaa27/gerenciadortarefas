@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/diamond.png">
+    <title>Upgrade</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>TORNE-SE PREMIUM</h1>
+        <p>O que está esperando para </p>
+        <button onclick="virarPremium()">torne-se premium agora mesmo</button>
+        <script>
+            async function virarPremium() {
+                const idPerfil = localStorage.getItem('idusuario')
+                if (!idPerfil) {
+                    window.location.href = './login/login.html'
+                }
+                const responseApi = await fetch('http://localhost:5082/usuario')
+                const listUsers = await responseApi.json()
+                let statusAtualizado
+                listUsers.forEach((usuario) => {
+                    if (usuario.id == idPerfil) {
+                        statusAtualizado = {
+                            nome: usuario.nome,
+                            email: usuario.email,
+                            senha: usuario.senha,
+                            premium: true
+                        };
+                    }
+                });
+                try {
+                    await fetch(`http://localhost:5082/usuario/${idPerfil}`, {
+                        method: 'PUT',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(statusAtualizado)
+                    });
+                    console.log('Premium agregado com sucesso!');
+                    window.location.href = '../home/index.html'
+                } catch (error) {
+                    console.error('Ocorreu um erro ao agregar o premium: ', error);
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>
+<style>
+    body {
+        background: rgb(200, 210, 63);
+        background: -moz-linear-gradient(90deg, rgba(200, 210, 63, 1) 0%, rgba(166, 169, 133, 1) 25%, rgba(153, 153, 153, 1) 50%, rgba(170, 173, 128, 1) 75%, rgba(200, 210, 63, 1) 100%);
+        background: -webkit-linear-gradient(90deg, rgba(200, 210, 63, 1) 0%, rgba(166, 169, 133, 1) 25%, rgba(153, 153, 153, 1) 50%, rgba(170, 173, 128, 1) 75%, rgba(200, 210, 63, 1) 100%);
+        background: linear-gradient(90deg, rgba(200, 210, 63, 1) 0%, rgba(166, 169, 133, 1) 25%, rgba(153, 153, 153, 1) 50%, rgba(170, 173, 128, 1) 75%, rgba(200, 210, 63, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c8d23f", endColorstr="#c8d23f", GradientType=1);
+    }
+
+    body {
+        display: flex;
+        height: 100vh;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container h1 {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        border: solid rgb(17, 3, 32) 0.3rem;
+        padding: 2%;
+        width: 24%;
+        border-radius: 32px;
+        aspect-ratio: 10/14;
+    }
+
+    button {
+        background-color: purple;
+        color: white;
+    }
+</style>

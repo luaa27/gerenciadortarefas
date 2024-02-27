@@ -1,0 +1,162 @@
+{
+  "usuario": [
+    {
+      "id": 1,
+      "nome": "João da Silva",
+      "email": "joao@silva.com",
+      "senha": "joao",
+      "premium": false
+    },
+    {
+      "id": 2,
+      "nome": "Maria Salvagni",
+      "email": "maria@salvagni.com",
+      "senha": "maria",
+      "premium": false
+    },
+    {
+      "id": 3,
+      "nome": "Gabriel Pereira",
+      "email": "gabriel@pereira.com",
+      "senha": "gabriel",
+      "premium": false
+    },
+    {
+      "id": 4,
+      "nome": "Vinicius",
+      "email": "vinicius@gmail.com",
+      "senha": "vinicius",
+      "premium": true
+    },
+    {
+      "nome": "Rubens",
+      "email": "rubens@",
+      "senha": "rubens",
+      "premium": true,
+      "id": 5
+    },
+    {
+      "nome": "Welbert",
+      "email": "welbert@",
+      "senha": "welbert",
+      "id": 6,
+      "premium": true
+    },
+    {
+      "nome": "Vitão",
+      "email": "vitor@email",
+      "senha": "vitor",
+      "id": 7,
+      "premium": true
+    },
+    {
+      "nome": "rubens2",
+      "email": "rubens@2",
+      "senha": "rubens",
+      "premium": true,
+      "id": 8
+    },
+    {
+      "nome": "ADMIN",
+      "email": "ADMIN",
+      "senha": "ADMIN",
+      "premium": false,
+      "admin": true,
+      "id": 9
+    }
+  ],
+  "tarefas": [
+    {
+      "id": 1,
+      "titulo": "Limpar a Casa",
+      "descricao": "",
+      "data": "2024-01-31",
+      "categoria": 3
+    },
+    {
+      "id": 2,
+      "titulo": "Aprender inglês",
+      "descricao": "",
+      "data": "2024-10-30",
+      "categoria": 1
+    },
+    {
+      "id": 3,
+      "titulo": "Novo emprego",
+      "descricao": "",
+      "data": "2024-02-10",
+      "categoria": 2
+    },
+    {
+      "id": 4,
+      "titulo": "Viajar",
+      "descricao": "",
+      "data": "2024-03-05",
+      "categoria": 1
+    },
+    {
+      "id": 5,
+      "titulo": "Conhecer mais pessoas",
+      "descricao": "",
+      "data": "2024-05-20",
+      "categoria": 1
+    },
+    {
+      "titulo": "Regar as plantas",
+      "descricao": "As plantas gostam de água entre 13:00-15:00, então faça as feliz. Atenção: Não regar as plantas em dias de chuva!!",
+      "data": "2024-02-29",
+      "categoria": "3",
+      "id": 6
+    },
+    {
+      "titulo": "Praticar exercícios",
+      "descricao": "30 abdominais, 30 flexões, 1 hora de caminhada",
+      "data": "2024-02-29",
+      "categoria": 4,
+      "idUsuario": 5,
+      "id": 7
+    },
+    {
+      "id": 8,
+      "titulo": "Enviar o projeto",
+      "descricao": "Finalizar o trabalho que me foi atribuído",
+      "data": "2024-03-30",
+      "categoria": 2
+    },
+    {
+      "id": 9,
+      "titulo": "Ler um livro",
+      "descricao": "Terminar Percy Jackson. Estou no capítulo 3",
+      "data": "2024-02-15",
+      "categoria": 1
+    },
+    {
+      "titulo": "Corrigir o trabalho",
+      "descricao": "Corrigir a tarefa dos alunos",
+      "data": "2024-02-29",
+      "categoria": "2",
+      "id": 10
+    },
+    {
+      "titulo": "Limpar a casa",
+      "descricao": "Passar o pano nos móveis!!!!!",
+      "data": "2024-02-08",
+      "categoria": "3",
+      "id": 11
+    }
+  ],
+  "comentarios": [
+    {
+      "content": "dwa",
+      "idTarefa": 1,
+      "idUsuario": "5",
+      "id": 1
+    },
+    {
+      "content": "edadq",
+      "idTarefa": 9,
+      "idUsuario": "5",
+      "id": 2
+    }
+  ]
+}

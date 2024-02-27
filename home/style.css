@@ -1,0 +1,382 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    cursor: default;
+}
+body{
+    height: 100vh;
+    background-color: white;
+}
+header{
+    background-color: mistyrose;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-family: 'Inika', serif;
+    text-transform: uppercase;
+    color: black;
+    font-size: 500%;
+    font-weight: lighter;
+}
+.logout{
+    position: absolute;
+    z-index: 0;
+    right: 5%;
+    font-size: 200%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    height: 5%;
+    display: flex;
+    align-items: center;
+    gap: 20%;
+    cursor: pointer;
+}
+.logout>img{
+    height: 100%;
+    cursor: pointer;
+
+}
+main{
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.adicionarTarefaPage,.editarTarefaPage,.comentarTarefaPage{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.comentarTarefaPage{
+    width: 0px;
+    right: -2px;
+    border-radius: 64px 0 0 64px;
+    transition: 0.5s;
+    justify-content: start;
+    padding: 1%;
+}
+.adicionarTarefaPage>input,.editarTarefaPage>input{
+    height: 10%;
+    width: 40%;
+    border: none;
+    font-size: 300%;
+    padding: 2%;
+    border-radius: 16px;
+    cursor: auto;
+}
+.closeButton{
+    height: 100px;
+    position: absolute;
+    top: 4%;
+    left: 7%;
+    background-color: white;
+    border-radius: 100%;
+    padding: 0.3%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+fieldset,textarea{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    height: 20%;
+    width: 17%;
+    font-family: 'Imprima', sans-serif;
+    overflow: hidden;
+}
+fieldset>p{
+    font-size: 150%;
+}
+fieldset>div>div{
+    font-size: 150%;
+}
+
+.descricaoTarefa{
+    font-size: 100%;
+    padding: 1%;
+    height: 15%;
+    text-align: start;
+    resize: none;
+    width: 40%;
+}
+.container{
+    background-color: #D9D9D9;
+    border-radius: 32px;
+    height: 90%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.topContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.topContainer>div{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+h2{
+    text-transform: uppercase;
+    font-family: 'Imprima', sans-serif;
+    color: #585858;
+    font-size: 300%;
+    font-weight: lighter;
+    margin: 3%;
+}
+.topContainer img{
+    height: 70px;
+    margin: 2% 5% 0% 0%;
+}
+#filtroButton{
+    cursor: pointer;
+}
+.painelFiltro{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(320px, -300px);
+    width: 150px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.holder{
+    height: 90%;
+    width: 97%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    margin-bottom: 2%;
+}
+.holder.holder::-webkit-scrollbar{
+    display: none;
+}
+.tarefas{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.5%;
+}
+.tarefa{
+    width: 90%;
+    background-color: rgb(204, 204, 204) ;
+    border-radius: 26px;
+}
+.tarefaTop{
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1% 2%;
+    background-color: gray;
+    border-radius: 26px 26px 0px 0px;
+}
+.tituloTarefa{
+    font-family: 'Indie Flower', cursive;
+    font-size: 150%;
+    font-weight: bolder;
+}
+.tarefaTopRight{
+    height: 100%;
+    width: 20%;
+    justify-content: space-between;
+    align-items: center;
+    display: inherit;
+    flex-direction: inherit;
+    justify-content: end; 
+    gap: 6%;
+}
+.tarefaTopRight img{
+    height: 80%;
+    width: auto;
+}
+.imgIcon{
+    cursor: pointer;
+}
+#mensagemInfoWarning {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.date{
+    font-family: 'Imprima', sans-serif;
+    font-size: 160%;
+    font-weight: bolder;
+}
+.tarefaBottom{
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    padding: 1% 2%;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 0 0 26px 26px;
+}
+.tarefaDescricao{
+    font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+    margin-right: 8%;
+    font-size: small;
+    font-weight: bold;
+    width: 100%;
+    text-wrap: wrap;
+
+}
+.tarefaCategoria{
+    background-color: rgba(255, 255, 255, 0.56);
+    border-radius: 100%;
+    margin-top: 1%;
+    height: fit-content;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+}
+.tarefaCategoria>img{
+    max-height: 40px;
+    padding: 3px;
+}
+button{
+    text-transform: uppercase;
+    font-family: 'Inria Sans', sans-serif;
+    background-color: #d9d9d9;
+    color:#ffffff;
+    border: none;
+    font-size: 250%;
+    padding: 1% 3%;
+    border-radius: 20px;
+    margin-bottom: 5%;
+    cursor: pointer;
+}
+
+.saude{
+    background-color: rgb(0, 218, 0);
+}
+.saude>.top{
+    background-color: green;
+}
+.pessoal{
+    background-color: #54F5FF;
+}
+.pessoal>.top{
+    background-color: #397DCE;
+}
+.trabalho{
+    background-color: rgb(214, 2, 2);
+}
+.trabalho>.top{
+    background-color: rgba(139, 0, 0, 0.925);
+}
+.casa{
+    background-color: rgb(155, 93, 93)
+}
+.casa>.top{
+    background-color: rgb(102, 38, 38);
+}
+
+
+.topCommentSession{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    /* background-color: red; */
+}
+
+.comentarios{
+    width: 100%;
+    /* background-color: purple; */
+}
+.comentario{
+    background-color: rgb(124, 119, 69);
+    color:white;
+    padding: 2%;
+    border-radius: 16px;
+    margin-top: 8%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.comentario>h3{
+    margin-bottom: 3%;
+}
+.closeButtonComment{
+    height:50px;
+    position: relative;
+}
+.buttonCommentSession{
+    font-size: 180%;
+    height: fit-content;
+    background-color: #6b6b6b;
+    margin-bottom: 0px;
+}
+
+#buttonAdicionarTarefa{
+    display: none;
+}
+.comentarioTextArea{
+    width: 100%;
+    padding: 2%;
+    height: 100px;
+    margin: 6% 0 2% 0;
+}
+.comentarioTextArea:focus{
+    outline: solid yellow 4px;
+    transition: 1s;
+}
+textArea{
+    cursor: auto;
+}
+#tarefaComentariosPageTop{
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+    width: 100%;
+    align-items: center;
+}
+.botaoPublish{
+    font-size: 100%;
+    width: fit-content;
+    background-color: #aeb100;
+}
+
+.comentarioTop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.comentarioContent{
+    word-wrap: break-word; 
+}

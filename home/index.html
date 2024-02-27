@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/pencil.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inika&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inria+Sans:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Imprima&family=Inika&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@300&family=Imprima&family=Inika&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./index.js" defer></script>
+    <title>Task List</title>
+</head>
+
+<body style="overflow: hidden;">
+    <div class="adicionarTarefaPage" style = 'visibility: hidden;'id="adicionarTarefaPage">
+        <img src="../img/xbutton.png" class="closeButton" id="botaoFecharPainelNovaTarefa">
+        <input type="text" placeholder="Título da tarefa" id=tituloTarefaNova>
+        <textarea placeholder="Descrição da tarefa" id=descricaoTarefaNova class="descricaoTarefa"></textarea>
+        <input type="date" id="dataTarefaNova">
+        <fieldset id=categoriaTarefaNova>
+            <p>Selecione uma categoria:</p>
+            <div>
+                <div>
+                    <input type="radio" id="pessoalOption" value=1 name="option">
+                    <label for="pessoalOption">Pessoal</label>
+                </div>
+                <div>
+                    <input type="radio" id="trabalhoOption" value=2 name="option">
+                    <label for="trabalhoOption">Trabalho</label>
+                </div>
+                <div>
+                    <input type="radio" id="casaOption" value=3 name="option">
+                    <label for="casaOption">Casa</label>
+                </div>
+                <div>
+                    <input type="radio" id="saudeOption" value=4 name="option">
+                    <label for="saudeOption">Saúde</label>
+                </div>
+            </div>
+        </fieldset>
+        <button onclick="cadastroTarefa()">Adicionar</button>
+    </div>
+    <div class="editarTarefaPage" style = 'visibility: hidden;'id="editarTarefaPage">
+        <img src="../img/xbutton.png" class="closeButton" id="botaoFecharPainelEditarTarefa">
+        <input type="text" placeholder="Título da tarefa" id=tituloTarefaEditada>
+        <textarea placeholder="Descrição da tarefa" id=descricaoTarefaEditada class="descricaoTarefa"></textarea>
+        <input type="date" id="dataTarefaEditada">
+        <fieldset id=categoriaTarefaEditada>
+            <p>Selecione uma categoria:</p>
+            <div>
+                <div>
+                    <input type="radio" id="pessoalOption" value=1 name="option">
+                    <label for="pessoalOption">Pessoal</label>
+                </div>
+                <div>
+                    <input type="radio" id="trabalhoOption" value=2 name="option">
+                    <label for="trabalhoOption">Trabalho</label>
+                </div>
+                <div>
+                    <input type="radio" id="casaOption" value=3 name="option">
+                    <label for="casaOption">Casa</label>
+                </div>
+                <div>
+                    <input type="radio" id="saudeOption" value=4 name="option">
+                    <label for="saudeOption">Saúde</label>
+                </div>
+            </div>
+        </fieldset>
+        <button id="finalizarEdicao">Editar</button>
+    </div>
+    <div class="comentarTarefaPage" style="visibility: hidden;" id="comentariosPage">
+        <div id="tarefaComentariosPageTop">
+        <div class="topCommentSession">
+            <img src="../img/xbutton.png" class="closeButton closeButtonComment" id="botaoFecharPainelComentarios">
+            <button class="buttonCommentSession" id="botaoAdicionarComentario" onclick="botaoAdicionarComentarioPressionado()">Adicionar Comentário</button>
+        </div>
+        </div>
+        <div class="holder holderComentarios">
+            <div class="comentarios" id="comentarios">
+            </div>
+        </div>
+
+    </div>
+    <header>
+        <h1>task list</h1>
+        <div class="logout" id="logout">
+            Sair
+            <img src="../img/logout.png">
+        </div>
+    </header>
+    <main>
+        <div class="container" id="containerTarefas">
+            <div class="topContainer">
+                <div><img src="../img/diamond_bw.png" id="premiumIcon"></div>
+                <h2>Tarefas</h2>
+                <img src="../img/sort.png" id="filtroButton">
+            </div>
+            <div class="holder holderTarefas">
+                <div class="tarefas" id="tarefas"></div>
+            </div>
+            <div id="mensagemInfoWarning">A data limite imposta para essa tarefa já foi ultrapassada</div>
+            <div id="painelFiltro" class="painelFiltro">
+                Sistema de filtragem ainda em desenvolvimento
+            </div>
+        </div>
+        <button onclick="callAdicionarTarefaPage()" id="buttonAdicionarTarefa">adicionar tarefa</button>
+    </main>
+</body>
+
+</html>
