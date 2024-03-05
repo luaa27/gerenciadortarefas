@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/Vitor-ext/Projeto-1-DS2#readme",
   "dependencies": {
-    "json-server": "^0.17.1",
+    "json-server": "^0.17.4",
     "nodemon": "^3.0.3",
     "toastify-js": "^1.12.0"
   }

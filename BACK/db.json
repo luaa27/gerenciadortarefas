@@ -1,11 +1,11 @@
 {
   "usuario": [
     {
-      "id": 1,
       "nome": "João da Silva",
       "email": "joao@silva.com",
       "senha": "joao",
-      "premium": false
+      "premium": true,
+      "id": 1
     },
     {
       "id": 2,
