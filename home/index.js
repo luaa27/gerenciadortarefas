@@ -203,15 +203,6 @@ async function capturarListaComentarios() {
 }
 
 
-filtroButton.addEventListener('click',filtrar) 
-function filtrar(){
-    filtro++
-    if(filtro==5){
-        filtro=0
-    }
-    atualizarPagina()
-}
-
 function excluirListaTarefas(){
     while (listaTarefas.firstChild) {
         listaTarefas.removeChild(listaTarefas.firstChild);
@@ -222,11 +213,8 @@ function excluirListaComentarios(){
         listaComentarios.removeChild(listaComentarios.firstChild);
     }
 }
-atualizarPagina()
-function atualizarPagina(){
-    excluirListaTarefas()
-    criarTarefas(filtro)
-}
+
+criarTarefas()
 
 
 
@@ -330,19 +318,13 @@ async function deletarTarefa(id) {
         console.error('Ocorreu um erro ao excluir a tarefa:', error);
     }
 }
-async function criarTarefas(filtro) {
+async function criarTarefas() {
     const infoTarefas = await capturarListaTarefas()
-    if(filtro>0){
         for (let cont = 0; cont < infoTarefas.length; cont++) {
-            if(infoTarefas[cont].categoria==filtro){
                 criarTarefa(infoTarefas[cont])
-            }
+            
         }
-    } else {
-        for (let cont = 0; cont < infoTarefas.length; cont++) {
-            criarTarefa(infoTarefas[cont])
-        }
-    }
+   
 
 }
 botaoLogout.addEventListener('click', logout)
@@ -397,7 +379,6 @@ async function criarTarefa(infoTarefas) {
    
     const tarefa = document.createElement('div')
     tarefa.classList.add('tarefa')
-    tarefa.classList.add(verificaCategoria(infoTarefas.categoria))
    
     const tarefaTop = document.createElement('div')
     tarefaTop.classList.add('tarefaTop')
@@ -450,11 +431,6 @@ async function criarTarefa(infoTarefas) {
 
     const categoriaIcon = document.createElement('img')
 
-
-    if(infoTarefas.categoria)
-    categoriaIcon.src = "../img/tarefasIcon/" + verificaCategoria(infoTarefas.categoria) + ".png"
-
-
     tarefaCategoria.appendChild(categoriaIcon)
     tarefaBottom.appendChild(tarefaDescricao)
     tarefa.appendChild(tarefaTop)
@@ -466,9 +442,6 @@ async function criarTarefa(infoTarefas) {
         tarefaTop.style.borderRadius = "26px";
     } else {
         tarefa.appendChild(tarefaBottom)
-        if(infoTarefas.categoria){
-            tarefaBottom.appendChild(tarefaCategoria)
-        }
     }
 
     if(infoTarefas.data){
@@ -546,20 +519,6 @@ async function criarComentario(infoComment){
     listaComentarios.appendChild(comentario)
 }
 
-function verificaCategoria(categoria) {
-    if (categoria == 1) {
-        return "pessoal"
-    }
-    if (categoria == 2) {
-        return "trabalho"
-    }
-    if (categoria == 3) {
-        return "casa"
-    }
-    if (categoria == 4) {
-        return "saude"
-    }
-}
 
 function verificarData(dataTarefa) {
     //Verifica se a data já foi ultrapassada

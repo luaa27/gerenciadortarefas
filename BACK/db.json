@@ -122,27 +122,6 @@
       "descricao": "Finalizar o trabalho que me foi atribuído",
       "data": "2024-03-30",
       "categoria": 2
-    },
-    {
-      "id": 9,
-      "titulo": "Ler um livro",
-      "descricao": "Terminar Percy Jackson. Estou no capítulo 3",
-      "data": "2024-02-15",
-      "categoria": 1
-    },
-    {
-      "titulo": "Corrigir o trabalho",
-      "descricao": "Corrigir a tarefa dos alunos",
-      "data": "2024-02-29",
-      "categoria": "2",
-      "id": 10
-    },
-    {
-      "titulo": "Limpar a casa",
-      "descricao": "Passar o pano nos móveis!!!!!",
-      "data": "2024-02-08",
-      "categoria": "3",
-      "id": 11
     }
   ],
   "comentarios": [
@@ -153,10 +132,10 @@
       "id": 1
     },
     {
-      "content": "edadq",
-      "idTarefa": 9,
-      "idUsuario": "5",
-      "id": 2
+      "content": "sss",
+      "idTarefa": 5,
+      "idUsuario": "1",
+      "id": 3
     }
   ]
 }

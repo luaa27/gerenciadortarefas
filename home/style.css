@@ -17,10 +17,8 @@ header{
     align-items: center;
 }
 h1{
-    font-family: 'Inika', serif;
-    text-transform: uppercase;
     color: black;
-    font-size: 500%;
+    font-size: 300%;
     font-weight: lighter;
 }
 .logout{
@@ -28,19 +26,14 @@ h1{
     z-index: 0;
     right: 5%;
     font-size: 200%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: white;
+    color: black;
     height: 5%;
     display: flex;
     align-items: center;
     gap: 20%;
     cursor: pointer;
 }
-.logout>img{
-    height: 100%;
-    cursor: pointer;
 
-}
 main{
     height: 85%;
     display: flex;
@@ -98,7 +91,6 @@ fieldset,textarea{
     border-radius: 16px;
     height: 20%;
     width: 17%;
-    font-family: 'Imprima', sans-serif;
     overflow: hidden;
 }
 fieldset>p{
@@ -116,15 +108,7 @@ fieldset>div>div{
     resize: none;
     width: 40%;
 }
-.container{
-    background-color: #D9D9D9;
-    border-radius: 32px;
-    height: 90%;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 .topContainer{
     width: 100%;
     display: flex;
@@ -138,9 +122,8 @@ fieldset>div>div{
 }
 h2{
     text-transform: uppercase;
-    font-family: 'Imprima', sans-serif;
-    color: #585858;
-    font-size: 300%;
+    color: black;
+    font-size: 200%;
     font-weight: lighter;
     margin: 3%;
 }
@@ -159,12 +142,10 @@ h2{
     transform: translate(320px, -300px);
     width: 150px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(117, 12, 12, 0.6);
     color: white;
     padding: 10px;
-    border-radius: 5px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
+    border-radius: 5px;}
 .holder{
     height: 90%;
     width: 97%;
@@ -186,7 +167,7 @@ h2{
 }
 .tarefa{
     width: 90%;
-    background-color: rgb(204, 204, 204) ;
+    background-color: rgb(252, 239, 241) ;
     border-radius: 26px;
 }
 .tarefaTop{
@@ -196,11 +177,10 @@ h2{
     align-items: center;
     justify-content: space-between;
     padding: 1% 2%;
-    background-color: gray;
+    background-color: pink;
     border-radius: 26px 26px 0px 0px;
 }
 .tituloTarefa{
-    font-family: 'Indie Flower', cursive;
     font-size: 150%;
     font-weight: bolder;
 }
@@ -227,15 +207,13 @@ h2{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: pink;
     color: white;
     padding: 10px;
     border-radius: 5px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
 }
 .date{
-    font-family: 'Imprima', sans-serif;
-    font-size: 160%;
     font-weight: bolder;
 }
 .tarefaBottom{
@@ -248,7 +226,6 @@ h2{
     border-radius: 0 0 26px 26px;
 }
 .tarefaDescricao{
-    font-family: 'IBM Plex Sans Thai Looped', sans-serif;
     margin-right: 8%;
     font-size: small;
     font-weight: bold;
@@ -256,55 +233,17 @@ h2{
     text-wrap: wrap;
 
 }
-.tarefaCategoria{
-    background-color: rgba(255, 255, 255, 0.56);
-    border-radius: 100%;
-    margin-top: 1%;
-    height: fit-content;
-    padding: 1%;
-    display: flex;
-    align-items: center;
-}
-.tarefaCategoria>img{
-    max-height: 40px;
-    padding: 3px;
-}
+
 button{
     text-transform: uppercase;
-    font-family: 'Inria Sans', sans-serif;
-    background-color: #d9d9d9;
-    color:#ffffff;
+    background-color: pink;
+    color:black;
     border: none;
     font-size: 250%;
     padding: 1% 3%;
     border-radius: 20px;
     margin-bottom: 5%;
     cursor: pointer;
-}
-
-.saude{
-    background-color: pink;
-}
-.saude>.top{
-    background-color: green;
-}
-.pessoal{
-    background-color: #54F5FF;
-}
-.pessoal>.top{
-    background-color: #397DCE;
-}
-.trabalho{
-    background-color: rgb(214, 2, 2);
-}
-.trabalho>.top{
-    background-color: rgba(139, 0, 0, 0.925);
-}
-.casa{
-    background-color: rgb(155, 93, 93)
-}
-.casa>.top{
-    background-color: rgb(102, 38, 38);
 }
 
 
@@ -314,20 +253,18 @@ button{
     align-items: center;
     width: 100%;
     justify-content: space-between;
-    /* background-color: red; */
+
 }
 
 .comentarios{
     width: 100%;
-    /* background-color: purple; */
 }
 .comentario{
-    background-color: rgb(124, 119, 69);
-    color:white;
+    background-color: rgb(230, 112, 132)  ;
+    color:black;
     padding: 2%;
     border-radius: 16px;
     margin-top: 8%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .comentario>h3{
     margin-bottom: 3%;
@@ -339,7 +276,7 @@ button{
 .buttonCommentSession{
     font-size: 180%;
     height: fit-content;
-    background-color: #6b6b6b;
+    background-color: pink;
     margin-bottom: 0px;
 }
 
@@ -352,10 +289,7 @@ button{
     height: 100px;
     margin: 6% 0 2% 0;
 }
-.comentarioTextArea:focus{
-    outline: solid yellow 4px;
-    transition: 1s;
-}
+
 textArea{
     cursor: auto;
 }
@@ -369,7 +303,7 @@ textArea{
 .botaoPublish{
     font-size: 100%;
     width: fit-content;
-    background-color: #aeb100;
+    background-color: pink;
 }
 
 .comentarioTop{
